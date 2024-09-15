@@ -1,0 +1,1 @@
+web gunicorn lottohanBackend.wsgi:application --log-file -
