@@ -1,1 +1,1 @@
-web gunicorn lottohanBackend.wsgi:application --log-file -
+web gunicorn exceleratebackend.wsgi:application --log-file -
