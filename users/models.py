@@ -32,6 +32,12 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    profile_picture = models.ImageField(
+        upload_to="images/", default="defaults/default_profile.jpg"
+    )
+    profile_banner = models.ImageField(
+        upload_to="images/", default="defaults/default_profile.jpg"
+    )
     email = models.EmailField(blank=True)
     full_name = models.CharField(max_length=255, unique=True)
     phone_number = models.CharField(max_length=15, unique=True)
